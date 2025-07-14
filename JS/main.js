@@ -18,7 +18,7 @@ for (let i = 0; i < usuarios.length; i++) {
   }
 }
 
-//Condiciones Anidadas
+//CONDICIONES ANIDADAS
 let edad = null;
 let nombre = "Carlos";
 
@@ -32,7 +32,7 @@ if (edad !== null && edad !== undefined) {
   }
 }
 
-//Descuento
+//DESCUENTO
 const mensaje = document.getElementById("mensaje");
 const boton = document.getElementById("cambiarDescuento");
 
@@ -57,3 +57,18 @@ boton.addEventListener("click", () => {
 
   mensaje.textContent = `El descuento es del ${descuentoActual}%`;
 });
+
+// FUNCIONES
+function saludar(nombre) {
+  console.log(`Hola, ${nombre}`);
+}
+
+saludar("Ana");
+saludar("Juan");
+saludar("María");
+
+function calcularAreaTriangulo(base, altura) {
+  return (base * altura) / 2;
+}
+
+console.log(`El área del triángulo es ${calcularAreaTriangulo(10, 5)}`);
