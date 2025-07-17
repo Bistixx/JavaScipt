@@ -121,3 +121,35 @@ let libro1 = agregarLibro("1984", "George Orwell");
 // Mostrar detalles del libro
 mostrarDetalleLibro(libro1);
 // Muestra: Título: 1984, Autor: George Orwell
+
+
+function devolverLibro(titulo, diasRetraso = 0) {
+    const multa = diasRetraso * 0.50;
+    const mensaje = diasRetraso > 0 
+        ? `Devuelto con ${diasRetraso} días de retraso. Multa: $${multa}` 
+        : "Devuelto a tiempo. No hay multa.";
+    console.log(`Libro "${titulo}": ${mensaje}`);
+}
+
+devolverLibro("El Principito");
+// Muestra: Libro "El Principito": Devuelto a tiempo. No hay multa.
+
+devolverLibro("El Principito", 3);
+// Muestra: Libro "El Principito": Devuelto con 3 días de retraso. Multa: $1.5.
+
+//Mostrar color
+let color = 'azul';
+
+function mostrarColor() {
+    console.log(color); // Accede a la variable global
+}
+
+mostrarColor(); // Imprime: azul
+
+document.getElementById("miBoton").addEventListener("click", function() {
+    alert("¡Botón pulsado, perdiste!");
+});
+
+//FUNCION FLECHA
+const sumarFlecha = a => a + 10;
+console.log(sumarFlecha(5));
