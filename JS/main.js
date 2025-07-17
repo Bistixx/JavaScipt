@@ -72,3 +72,52 @@ function calcularAreaTriangulo(base, altura) {
 }
 
 console.log(`El área del triángulo es ${calcularAreaTriangulo(10, 5)}`);
+
+//SUMA EN FUNCION
+function sumar(a, b)//parametros
+ {
+    return a + b;
+}
+
+let resultado = sumar(5, 3); //argumentos 
+console.log(resultado);  // Muestra: 8
+
+// FUNCION PARA CALCULAR DESCUENTO
+function calcularDescuento(precio, porcentajeDescuento) {
+    return precio - (precio * porcentajeDescuento / 100);
+}
+
+// Función para calcular el precio final incluyendo impuestos
+function calcularPrecioFinal(precio, descuento, impuesto) {
+    let precioConDescuento = calcularDescuento(precio, descuento);
+    return precioConDescuento + (precioConDescuento * impuesto / 100);
+}
+
+// Invocación
+let total = calcularPrecioFinal(100, 10, 21);
+console.log(total);
+
+//FUNCION CALCULAR MULTA
+function calcularMulta(diasRetraso) {
+    const multaPorDia = 0.50; // 50 centavos por día de retraso
+    return diasRetraso * multaPorDia;
+}
+
+let multa = calcularMulta(5);
+console.log(`La multa total es: $${multa}`); // Muestra: La multa total es: $2.5
+
+// FUNCION AGREGAR Y BUSCAR LIBROS
+function agregarLibro(titulo, autor) {
+    return { titulo, autor };
+}
+
+function mostrarDetalleLibro(libro) {
+    console.log(`Título: ${libro.titulo}, Autor: ${libro.autor}`);
+}
+
+// Agregar un libro
+let libro1 = agregarLibro("1984", "George Orwell");
+
+// Mostrar detalles del libro
+mostrarDetalleLibro(libro1);
+// Muestra: Título: 1984, Autor: George Orwell
