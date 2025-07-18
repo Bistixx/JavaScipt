@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Progreso JS</title>
     <script defer src="/JS/main.js"></script>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 50px;
-      }
-
-      p {
-        color: #555;
-      }
-    </style>
+    <link rel="stylesheet" href="/CSS/style.css" />
   </head>
   <body>
+    <!-- Descuento -->
     <h1>Configuración de Descuento</h1>
     <p id="mensaje"></p>
     <button id="cambiarDescuento">Cambiar Descuento</button>
-    <button id="miBoton">NO PULSAR</button>
+
+    <!-- Boton de no pulsar -->
+    <button id="BotonNoApretar">NO PULSAR</button>
+
+    <!-- Recuperar cuenta -->
+  <button id="recuperarBtn" class="recuperar-btn">Recuperar Cuenta</button>
+  <div id="resultado" class="recuperar-resultado oculto"></div>
+
+    <!-- Semáforo -->
+  <div class="botones">
+    <button class="rojo" onclick="semaforo('rojo')">Rojo</button>
+    <button class="amarillo" onclick="semaforo('amarillo')">Amarillo</button>
+    <button class="verde" onclick="semaforo('verde')">Verde</button>
+  </div>
+
+  <div id="estado"></div>
+
   </body>
 </html>
