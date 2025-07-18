@@ -153,3 +153,12 @@ document.getElementById("miBoton").addEventListener("click", function() {
 //FUNCION FLECHA
 const sumarFlecha = a => a + 10;
 console.log(sumarFlecha(5));
+
+//ARRAYS
+const frutas = ["manzana", "banana", "cereza"];
+
+// Acceder al primer elemento
+console.log(frutas[0]);  // "manzana"
+
+// Acceder al tercer elemento
+console.log(frutas[2]);  // "cereza"
